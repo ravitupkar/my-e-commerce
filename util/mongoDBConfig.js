@@ -6,7 +6,7 @@ const mongoConnect = () =>{
     client.connect()    
     .then(client =>{
         // console.log(client); 
-        console.log('Connected ');
+        // console.log('Connected ');
         _db = client.db();
     })
     .catch(err => {

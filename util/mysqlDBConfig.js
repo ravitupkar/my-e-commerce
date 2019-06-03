@@ -4,7 +4,7 @@ const uri = "mongodb+srv://ravitupkar01:ravitupkar01@cluster0ravi-flkid.mongodb.
 
 mongoose.connect(url, function(err, db) {
   if (err) throw err;
-  console.log("Database created!");
+  // console.log("Database created!");
   db.close();
 });
 

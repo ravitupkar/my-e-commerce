@@ -6,7 +6,7 @@ var Products = require('../models/productModel');
  
 mongoose.connect(uri,  { useNewUrlParser: true }, function (err) {
     if (err) throw err;
-   console.log('Successfully connected');
+//    console.log('Successfully connected');
 });
 
 exports.login = (req, res) =>{
