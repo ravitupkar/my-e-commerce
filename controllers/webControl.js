@@ -1,3 +1,14 @@
+const mongoose = require('mongoose');
+const uri = "mongodb+srv://ravitupkar01:ravitupkar01@cluster0ravi-flkid.mongodb.net/shop?retryWrites=true";
+
+ 
+var Products = require('../models/productModel');
+ 
+mongoose.connect(uri,  { useNewUrlParser: true }, function (err) {
+    if (err) throw err;
+   console.log('Successfully connected');
+});
+
 exports.login = (req, res) =>{
     res.render('login.ejs');
 }
@@ -15,7 +26,14 @@ exports.services  = (req, res) =>{
 }
 
 exports.products  = (req, res) =>{
-    res.render('products.ejs');
+    Products.find({}, function(err, products) {
+        if (err) throw err;
+        console.log(products);
+        res.render('products.ejs', {
+            products : products
+        });
+      });
+   
 }
 
 exports.productsDetails  = (req, res) =>{
