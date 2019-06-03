@@ -26,14 +26,14 @@ exports.services  = (req, res) =>{
 }
 
 exports.products  = (req, res) =>{
-    Products.find({}, function(err, products) {
-        if (err) throw err;
-        console.log(products);
-        res.render('products.ejs', {
-            products : products
-        });
-      });
-   
+    // Products.find({}, function(err, products) {
+    //     if (err) throw err;
+    //     console.log(products);
+    //     res.render('products.ejs', {
+    //         products : products
+    //     });
+    //   });
+    res.render('products.ejs');
 }
 
 exports.productsDetails  = (req, res) =>{
