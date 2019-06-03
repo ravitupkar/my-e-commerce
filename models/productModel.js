@@ -9,6 +9,7 @@ var productSchema = mongoose.Schema({
     product_desc: String,
     product_picture: Buffer,
     product_star: String,
+    product_cat: String,
     product_highlights: {
         fabric: {
             type: String

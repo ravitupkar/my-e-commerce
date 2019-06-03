@@ -3,14 +3,14 @@
 <title>Colored  an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<% include head.ejs %>
+<% include ../head.ejs %>
 </head>
 <body class="dashboard-page">
-          <% include header.ejs %>
+          <% include ../header.ejs %>
           <div class="main-grid">
-                <div class="agile-grids">	
+                <div class="container">	
                     <!-- input-forms -->
-                    <div class="grids">
+                    <div class="container">
                         
                             <div class="panel panel-widget forms-panel">
                                     <div class="progressbar-heading general-heading">
@@ -19,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="forms">
                                             <h3 class="title1"></h3>
                                             <div class="form-three widget-shadow">
-                                                <form class="form-horizontal" action="/admin/product-save" method="post">
+                                                <form class="form-horizontal" action="/product-save" method="post">
                                                     <fieldset>
 
                                                         <!-- Form Name -->
@@ -51,7 +51,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                             <label class="col-md-4 control-label" for="product_dis_price">PRODUCT DIS PRICE</label>  
                                                             <div class="col-md-4">
                                                             <input id="product_dis_price" name="product_dis_price" placeholder="PRODUCT DIS PRICE" class="form-control input-md" required="" type="text">
-                                                              
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="product_cat">PRODUCT Category</label>  
+                                                            <div class="col-md-4">
+                                                            <select id="product_cat" name="product_cat" placeholder="PRODUCT Category" class="form-control input-md" required="">
+                                                              <option value="men">men</option>
+                                                              <option value="women">women</option>
+                                                              <option value="boy">boy</option>
+                                                              <option value="girl">girl</option>
+                                                            </select>
                                                             </div>
                                                           </div>
                                                           
@@ -114,6 +125,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
 </section>
-          <% include footer.ejs %>
+          <% include ../footer.ejs %>
 </body>
 </html>

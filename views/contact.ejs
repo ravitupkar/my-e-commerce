@@ -37,18 +37,18 @@
                          <!-- contact form grid -->
                          <div class="contact-top1">
                              <h5 class="text-dark mb-4 text-capitalize">send us a note</h5>
-                             <form action="#" method="get" class="f-color">
+                             <form action="/contactSave" method="POST" class="f-color">
                                  <div class="form-group">
                                      <label for="contactusername">Name</label>
-                                     <input type="text" class="form-control" id="contactusername" required>
+                                     <input type="text" class="form-control" id="contactusername" name="contactusername" required>
                                  </div>
                                  <div class="form-group">
                                      <label for="contactemail">Email</label>
-                                     <input type="email" class="form-control" id="contactemail" required>
+                                     <input type="email" class="form-control" id="contactemail" name="contactemail" required>
                                  </div>
                                  <div class="form-group">
                                      <label for="contactcomment">Your Message</label>
-                                     <textarea class="form-control" rows="5" id="contactcomment" required></textarea>
+                                     <textarea class="form-control" rows="5" id="contactcomment" name="contactcomment" required></textarea>
                                  </div>
                                  <button type="submit" class="btn btn-info btn-block">Submit</button>
                              </form>

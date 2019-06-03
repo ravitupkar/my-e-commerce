@@ -3,10 +3,10 @@
 <title>Colored  an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<% include head.ejs %>
+<% include ../head.ejs %>
 </head>
 <body class="dashboard-page">
-          <% include header.ejs %>
+          <% include ../header.ejs %>
           <div class="main-grid">
                 <div class="agile-grids">	
                     <!-- input-forms -->
@@ -19,7 +19,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="forms">
                                             <h3 class="title1"></h3>
                                             <div class="form-three widget-shadow">
-                                                <form class="form-horizontal" action="/admin/product-update/<%= product._id %>" method="post">
+                                                <form class="form-horizontal" action="/product-update/<%= product._id %>" method="post">
                                                     <fieldset>
 
                                                         <!-- Form Name -->
@@ -115,6 +115,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
 </section>
-          <% include footer.ejs %>
+          <% include ../footer.ejs %>
 </body>
 </html>
