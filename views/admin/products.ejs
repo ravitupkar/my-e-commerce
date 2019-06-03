@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<title>Colored  an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<% include head.ejs %>
+</head>
+<body class="dashboard-page">
+          <% include header.ejs %>
+          <div class="main-grid">
+                <div class="agile-grids">	
+                    <!-- blank-page -->
+                    <div class="w3l-table-info">
+                              <h3>Basic Implementation  <a href="/admin/product-add">Add Product</a> </h3>
+                                <table id="table" class="">
+                                 <thead>
+                                   <tr>
+                                      <th>sr</th>
+                                      <th>product_name</th>
+                                      <th>product_sku</th>
+                                      <th>product_dis_price</th>
+                                      <th>product_star</th>
+                                      <th>product_picture</th>
+                                      <th>Action</th>
+                                   </tr>
+                                 </thead>
+                                 <tbody>
+                                       <%  
+                                       if(products.length){
+                                       products.forEach(function(product, index) { %>
+                                   <tr>
+                                     <td data-th="sr"><span class="bt-content"><%= ++index %></span></td>
+                                      <td data-th="product_name"><span class="bt-content"><%= product.product_sku %></span></td>
+                                      <td data-th="product_sku"><span class="bt-content"><%= product.product_name %></span></td>
+                                      <td data-th="product_dis_price"><span class="bt-content"><%= product.product_old_price %></span></td>
+                                      <td data-th="product_star"><span class="bt-content"><%= product.product_star %></span></td>
+                                      <td data-th="product_picture"><span class="bt-content"><%= product.product_picture %></span></td>
+                                      <td data-th="Action"><span class="bt-content">
+                                        <a href="/admin/product-details/<%= product._id %>"><i class="fa fa-file-text-o nav_icon" style="width: 10px;"></i></a>
+                                        <a href="/admin/product-edit/<%= product._id %>"><i class="fa fa-check-square-o nav_icon" style="width: 10px;"></i></a>
+                                        <a href="/admin/product-delete/<%= product._id %>"><i class="fa fa-bar-chart  nav_icon" style="width: 10px;"></i></a>
+                                      </span></td>
+                                     
+                                   </tr>
+                                   <% }); }else{ %>
+                                   <tr>No Data avialable</tr>
+                                    <%  } %>
+                                
+                                  
+                                 </tbody>
+                              </table>
+                            </div>
+                    <!-- //blank-page -->
+                </div>
+            </div>
+</section>
+          <% include footer.ejs %>
+</body>
+</html>

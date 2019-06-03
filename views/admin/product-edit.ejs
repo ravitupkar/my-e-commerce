@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<title>Colored  an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<% include head.ejs %>
+</head>
+<body class="dashboard-page">
+          <% include header.ejs %>
+          <div class="main-grid">
+                <div class="agile-grids">	
+                    <!-- input-forms -->
+                    <div class="grids">
+                        
+                            <div class="panel panel-widget forms-panel">
+                                    <div class="progressbar-heading general-heading">
+                                        <h4>EDIT PRODUCT :</h4>
+                                    </div>
+                                    <div class="forms">
+                                            <h3 class="title1"></h3>
+                                            <div class="form-three widget-shadow">
+                                                <form class="form-horizontal" action="/admin/product-update/<%= product._id %>" method="post">
+                                                    <fieldset>
+
+                                                        <!-- Form Name -->
+                                                        <!-- <legend>PRODUCTS product_name</legend> -->
+                                                        <!-- Text input-->
+                                                        <div class="form-group">
+                                                                <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>  
+                                                                <div class="col-md-4">
+                                                                <input id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text"  value="<%= product.product_name %>">
+                                                                  
+                                                                </div>
+                                                              </div>
+                                                             
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="product_id">PRODUCT SKU</label>  
+                                                          <div class="col-md-4">
+                                                          <input id="product_sku" name="product_sku" placeholder="PRODUCT SKU" class="form-control input-md" required="" type="text" value="<%= product.product_sku %>">
+                                                            
+                                                          </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="product_old_price">PRODUCT OLD PRICE</label>  
+                                                            <div class="col-md-4">
+                                                            <input id="product_old_price" name="product_old_price" placeholder="PRODUCT OLD PRICE" class="form-control input-md" required="" type="text" value="<%= product.product_old_price %>">
+                                                              
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="product_dis_price">PRODUCT DIS PRICE</label>  
+                                                            <div class="col-md-4">
+                                                            <input id="product_dis_price" name="product_dis_price" placeholder="PRODUCT DIS PRICE" class="form-control input-md" required="" type="text" value="<%= product.product_dis_price %>">
+                                                              
+                                                            </div>
+                                                          </div>
+                                                          
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="product_desc">PRODUCT DESCRIPTION</label>  
+                                                            <div class="col-md-4">
+                                                            <textarea name="product_desc" id="product_desc" rows="9" placeholder="Content..." class="form-control"><%= product.product_desc %></textarea>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="product_picture">PRODUCT PICTURE</label>  
+                                                            <div class="col-md-4">
+                                                            <input id="product_picture" name="product_picture" placeholder="PRODUCT PICTURE" class="form-control input-md" required="" type="file">
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="product_star">PRODUCT STAR</label>  
+                                                            <div class="col-md-4">
+                                                            <input id="product_star" name="product_star" placeholder="PRODUCT STAR" class="form-control input-md" required="" type="text" value="<%= product.product_star %>">
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="pattern">PATTERN</label>  
+                                                            <div class="col-md-4">
+                                                            <input id="pattern" name="pattern" placeholder="PATTERN" class="form-control input-md" required="" type="text" value="<%= product.product_highlights.pattern %>">
+                                                            </div>
+                                                          </div>
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="type">TYPE</label>  
+                                                            <div class="col-md-4">
+                                                            <input id="type" name="type" placeholder="TYPE" class="form-control input-md" required="" type="text" value="<%= product.product_highlights.type %>">
+                                                            </div>
+                                                          </div>
+                                                          <div class="form-group">
+                                                            <label class="col-md-4 control-label" for="fit">FIT</label>  
+                                                            <div class="col-md-4">
+                                                            <input id="fit" name="fit" placeholder="FIT" class="form-control input-md" required="" type="text" value="<%= product.product_highlights.fit %>">
+                                                            </div>
+                                                          </div>
+
+                                                        <!-- Button -->
+                                                        <div class="form-group">
+                                                          <label class="col-md-4 control-label" for="singlebutton"></label>
+                                                          <div class="col-md-4">
+                                                            <button id="singlebutton" class="btn btn-primary">Save</button>
+                                                          </div>
+                                                          </div>
+                                                        
+                                                        </fieldset>
+                                                </form>
+                                            </div>
+                                    </div>
+                                </div>
+                        
+                    </div>
+                    <!-- //input-forms -->
+                </div>
+            </div>
+</section>
+          <% include footer.ejs %>
+</body>
+</html>
